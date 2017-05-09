@@ -1,2 +1,3 @@
 FROM python
-RUN pip install -U googlemaps
+COPY requirements.txt /tmp/requirements.txt
+RUN cd /tmp/ && pip3 install -r requirements.txt
