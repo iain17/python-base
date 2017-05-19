@@ -1,0 +1,11 @@
+version: '2'
+volumes:
+    bin:
+services:
+  test:
+    container_name: example
+    image: "iain17/pythonbase"
+    volumes:
+      - ".:/opt/service"
+    ports:
+      - "8080:8080"

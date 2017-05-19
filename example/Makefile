@@ -1,3 +1,5 @@
-Run:
-	docker build -t example-python .
-	docker run example-python
+run:
+	python3 main.py
+
+start:
+	docker-compose up
