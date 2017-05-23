@@ -14,7 +14,7 @@ done
 # uses inotify to check whether files have been created, moved, edited etc.
 while true
 do
-    inotifywait -m /opt/service -e create -e modify -e delete -e move -e moved_to |
+    inotifywait -m /opt/service -r -e create -e modify -e delete -e move -e moved_to |
 		while read path action file; do
 			file_extension=${file##*.}
 			
