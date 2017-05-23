@@ -1,4 +1,2 @@
-import googlemaps
-from datetime import datetime
-
+# Python test file
 print("Hello world. 124")
