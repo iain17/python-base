@@ -2,7 +2,7 @@
 echo "Starting service..."
 
 # add specific files or their extensions to watch them 
-files_to_watch=("py" "*yaml" "Makefile" "")
+files_to_watch=("py" "*yaml" "Makefile")
 
 # create an associative map to check against
 declare -A map
@@ -14,7 +14,7 @@ done
 # uses inotify to check whether files have been created, moved, edited etc.
 while true
 do
-    inotifywait -m ./test -e create -e modify -e delete -e move -e moved_to |
+    inotifywait -m /opt/service -e create -e modify -e delete -e move -e moved_to |
 		while read path action file; do
 			file_extension=${file##*.}
 			

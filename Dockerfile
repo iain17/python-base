@@ -22,4 +22,4 @@ RUN cd /tmp/ && pip3 install -r requirements.txt
 #
 RUN mkdir -p /opt/service
 WORKDIR /opt/service
-ENTRYPOINT ["/bin/sh", "/docker-entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "/docker-entrypoint.sh"]
