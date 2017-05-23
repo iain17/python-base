@@ -12,3 +12,5 @@ randomize>=0.13
 googlemaps==2.4.6
 pytest-mock
 flask-cors
+typing
+datadog
