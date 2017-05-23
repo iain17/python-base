@@ -2,7 +2,7 @@
 echo "Starting service..."
 
 # add specific files or their extensions to watch them 
-files_to_watch=("py" "*yaml" "Makefile" "")
+files_to_watch=("py" "*yaml" "Makefile")
 
 # create an associative map to check against
 declare -A map
