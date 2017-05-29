@@ -1,5 +1,6 @@
 #/bin/bash
 echo "Starting service..."
+make run &
 
 # add specific files or their extensions to watch them 
 files_to_watch=("py" "*yaml" "Makefile")
@@ -19,9 +20,9 @@ do
 			file_extension=${file##*.}
 			
 			if [[ ${map["$file_extension"]} ]]; then 
-				pkill -f python
-				make run
 				echo "Change detected. Reloading..."
+				pkill -f python
+				make run &
 			fi
 		done
 done
